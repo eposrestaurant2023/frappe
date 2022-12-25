@@ -221,25 +221,26 @@ def get_doctype_module(doctype: str) -> str:
 
 
 def load_doctype_module(doctype, module=None, prefix="", suffix=""):
-	"""Returns the module object for given doctype.
+    if doctype !="Report Report":
+		"""Returns the module object for given doctype.
 
-	Note: This will return the standard defined module object for the doctype irrespective
-	of the `override_doctype_class` hook.
-	"""
-	module = module or get_doctype_module(doctype)
-	app = get_module_app(module)
-	key = (app, doctype, prefix, suffix)
-	module_name = get_module_name(doctype, module, prefix, suffix)
+		Note: This will return the standard defined module object for the doctype irrespective
+		of the `override_doctype_class` hook.
+		"""
+		module = module or get_doctype_module(doctype)
+		app = get_module_app(module)
+		key = (app, doctype, prefix, suffix)
+		module_name = get_module_name(doctype, module, prefix, suffix)
 
-	if key not in doctype_python_modules:
-		try:
-			doctype_python_modules[key] = frappe.get_module(module_name)
-		except ImportError as e:
-			msg = f"Module import failed for {doctype}, the DocType you're trying to open might be deleted."
-			msg += f"<br> Error: {e}"
-			raise ImportError(msg) from e
+		if key not in doctype_python_modules:
+			try:
+				doctype_python_modules[key] = frappe.get_module(module_name)
+			except ImportError as e:
+				msg = f"Module import failed for {doctype}, the DocType you're trying to open might be deleted."
+				msg += f"<br> Error: {e}"
+				raise ImportError(msg) from e
 
-	return doctype_python_modules[key]
+		return doctype_python_modules[key]
 
 
 def get_module_name(
