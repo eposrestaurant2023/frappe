@@ -515,7 +515,6 @@
    "label": "Disable Username/Password Login"
   },
   {
-   "default": "USD",
    "fieldname": "currency",
    "fieldtype": "Link",
    "label": "Currency",
