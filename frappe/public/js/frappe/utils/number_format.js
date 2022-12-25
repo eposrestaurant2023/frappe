@@ -145,7 +145,8 @@ function get_currency_symbol(currency) {
 			return null;
 
 		if (!currency) currency = frappe.boot.sysdefaults.currency;
-
+		
+		
 		return frappe.model.get_value(":Currency", currency, "symbol") || currency;
 	} else {
 		// load in template

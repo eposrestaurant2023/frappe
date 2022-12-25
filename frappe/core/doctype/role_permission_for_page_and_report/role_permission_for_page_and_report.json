@@ -36,7 +36,7 @@
    "fieldname": "report",
    "fieldtype": "Link",
    "label": "Report",
-   "options": "Report"
+   "options": "Report Report"
   },
   {
    "fieldname": "column_break_4",
@@ -71,7 +71,7 @@
  "hide_toolbar": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-11-23 12:39:05.750386",
+ "modified": "2022-12-21 15:19:50.693270",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Role Permission for Page and Report",

@@ -348,6 +348,7 @@
    "collapsible": 1,
    "fieldname": "document_follow_notifications_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Document Follow"
   },
   {
@@ -369,6 +370,7 @@
    "depends_on": "enabled",
    "fieldname": "email_settings",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Email"
   },
   {
@@ -553,6 +555,7 @@
    "depends_on": "enabled",
    "fieldname": "third_party_authentication",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Third Party Authentication",
    "permlevel": 1
   },
@@ -690,6 +693,7 @@
    "collapsible": 1,
    "fieldname": "desk_settings_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Desk Settings"
   }
  ],
@@ -753,7 +757,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-09-19 16:05:46.485242",
+ "modified": "2022-12-24 12:37:47.583225",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",

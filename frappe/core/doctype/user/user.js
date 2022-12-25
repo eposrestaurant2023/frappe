@@ -66,8 +66,8 @@ frappe.ui.form.on("User", {
 	},
 
 	onload: function (frm) {
-		frm.can_edit_roles = has_access_to_edit_user();
-
+		frm.can_edit_roles =  has_access_to_edit_user();
+		
 		if (frm.is_new() && frm.roles_editor) {
 			frm.roles_editor.reset();
 		}
@@ -351,14 +351,17 @@ frappe.ui.form.on("User Email", {
 });
 
 function has_access_to_edit_user() {
+	 
+
 	return has_common(frappe.user_roles, get_roles_for_editing_user());
 }
 
 function get_roles_for_editing_user() {
+	
 	return (
 		frappe
 			.get_meta("User")
 			.permissions.filter((perm) => perm.permlevel >= 1 && perm.write)
-			.map((perm) => perm.role) || ["System Manager"]
+			.map((perm) => perm.role) || ["System Manager","Admin"]
 	);
 }

@@ -81,8 +81,19 @@
  "icon": "fa fa-bitcoin",
  "idx": 1,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2022-07-04 09:42:52.425440",
+ "links": [
+  {
+   "group": "Exchange Rate",
+   "link_doctype": "Currency Exchange",
+   "link_fieldname": "to_currency"
+  },
+  {
+   "group": "Payment Type",
+   "link_doctype": "Payment Type",
+   "link_fieldname": "currency"
+  }
+ ],
+ "modified": "2022-12-21 18:27:53.518228",
  "modified_by": "Administrator",
  "module": "Geo",
  "name": "Currency",

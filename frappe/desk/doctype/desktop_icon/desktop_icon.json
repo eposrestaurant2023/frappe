@@ -112,7 +112,7 @@
    "fieldname": "_report",
    "fieldtype": "Link",
    "label": "_report",
-   "options": "Report"
+   "options": "Report Report"
   },
   {
    "fieldname": "link",
@@ -147,7 +147,7 @@
  ],
  "in_create": 1,
  "links": [],
- "modified": "2022-08-03 12:20:50.577580",
+ "modified": "2022-12-21 15:19:51.627515",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Desktop Icon",

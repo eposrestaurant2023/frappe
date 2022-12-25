@@ -134,6 +134,18 @@ export default class QuickListWidget extends Widget {
 
 	setup_quick_list_item(doc) {
 		const indicator = frappe.get_indicator(doc, this.document_type);
+		
+		let sub_title="";
+		if(this.sub_title_fields){
+			 
+			let sub_title_fields = this.sub_title_fields.split(",");
+			for (let i = 0; i < sub_title_fields.length; i++) {
+				if (doc[sub_title_fields[i]]){ 
+					sub_title =sub_title +  doc[sub_title_fields[i]] + ', '
+				}
+			}
+		}
+		sub_title = sub_title +  frappe.datetime.prettyDate(doc.modified);
 
 		let $quick_list_item = $(`
 			<div class="quick-list-item">
@@ -143,18 +155,29 @@ export default class QuickListWidget extends Widget {
 						${strip_html(doc[this.title_field_name])}
 					</div>
 					<div class="timestamp text-muted">
-						${frappe.datetime.prettyDate(doc.modified)}
-					</div>
+					${sub_title}
+				 </div>
 				</div>
 			</div>
-		`);
-
+		`)
+		 
+		
 		if (indicator) {
 			$(`
 				<div class="status indicator-pill ${indicator[1]} ellipsis">
 					${__(indicator[0])}
 				</div>
 			`).appendTo($quick_list_item);
+		}
+
+		if(this.total_amount_field){ 
+			if(doc[this.total_amount_field]){ 
+				$(`
+					<div class="status indicator-pill">
+						${frappe.format(doc[this.total_amount_field], {"fieldtype":"Currency"})}
+					</div>
+				`).appendTo($quick_list_item);
+			}
 		}
 
 		$(`<div class="right-arrow">${frappe.utils.icon("right", "xs")}</div>`).appendTo(
@@ -170,7 +193,7 @@ export default class QuickListWidget extends Widget {
 
 		return $quick_list_item;
 	}
-
+	
 	set_body() {
 		this.widget.addClass("quick-list-widget-box");
 
@@ -178,7 +201,21 @@ export default class QuickListWidget extends Widget {
 
 		frappe.model.with_doctype(this.document_type, () => {
 			let fields = ["name"];
+			//check total amount field from workspace doctype 
+			if(this.total_amount_field){ 
+				fields.push(this.total_amount_field);
+			}
 
+			//check sub title field if have covert string to array and loop add to fields 
+			 
+			if(this.sub_title_fields){
+			 
+				fields.concat(this.sub_title_fields.split(','));
+				fields = fields.concat(this.sub_title_fields.split(','))
+				
+			}
+			 
+			
 			// get name of title field
 			if (!this.title_field_name) {
 				let meta = frappe.get_meta(this.document_type);
@@ -188,14 +225,13 @@ export default class QuickListWidget extends Widget {
 			if (this.title_field_name && this.title_field_name != "name") {
 				fields.push(this.title_field_name);
 			}
-
+		
 			// check doctype has status field
-			this.has_status_field = frappe.meta.has_field(this.document_type, "status");
-
+			this.has_status_field = frappe.meta.has_field(this.document_type, "status") || frappe.meta.has_field(this.document_type, "disabled");
+			fields.push("docstatus");
 			if (this.has_status_field) {
 				fields.push("status");
-				fields.push("docstatus");
-
+				
 				// add workflow state field if workflow exist & is active
 				let workflow_fieldname = frappe.workflow.get_state_fieldname(this.document_type);
 				workflow_fieldname && fields.push(workflow_fieldname);

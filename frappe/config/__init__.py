@@ -26,12 +26,13 @@ def get_modules_from_all_apps():
 	modules_list = []
 	for app in frappe.get_installed_apps():
 		modules_list += get_modules_from_app(app)
+	
 	return modules_list
 
 
 def get_modules_from_app(app):
 	return frappe.get_all(
-		"Module Def", filters={"app_name": app}, fields=["module_name", "app_name as app"]
+		"Module Def", filters={"app_name": app,"is_hide":0}, fields=["module_name", "app_name as app"]
 	)
 
 

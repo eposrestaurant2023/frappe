@@ -103,6 +103,8 @@ class User(Document):
 			role_profile = frappe.get_doc("Role Profile", self.role_profile_name)
 			self.set("roles", [])
 			self.append_roles(*[role.role for role in role_profile.roles])
+		# for r in self.roles:
+		# 	msgprint(r.role)
 
 	def validate_allowed_modules(self):
 		if self.module_profile:
@@ -110,6 +112,14 @@ class User(Document):
 			self.set("block_modules", [])
 			for d in module_profile.get("block_modules"):
 				self.append("block_modules", {"module": d.module})
+	
+		if not self.name == "Administrator":
+			
+			modules = frappe.get_all("Module Def", filters={"is_hide": 1}, fields=["name"])
+			for m in modules:
+				if not any(d.module == m.name for d in self.block_modules):
+					self.append("block_modules", {"module": m.name})
+						 
 
 	def validate_user_image(self):
 		if self.user_image and len(self.user_image) > 2000:
@@ -651,10 +661,11 @@ def get_timezones():
 def get_all_roles(arg=None):
 	"""return all roles"""
 	active_domains = frappe.get_active_domains()
-
+	hide_roles = "Translator,Maintenance Manager,Maintenance User,Newsletter Manager,Knowledge Base Editor,Knowledge Base Contributor,Blogger,Script Manager,Prepared Report User,Inbox User,Report Manager,Workspace Manager,Dashboard Manager,Website Manager,Administrator,Guest,All"
+ 
 	roles = frappe.get_all(
 		"Role",
-		filters={"name": ("not in", "Administrator,Guest,All"), "disabled": 0},
+		filters={"name": ("not in", hide_roles), "disabled": 0},
 		or_filters={"ifnull(restrict_to_domain, '')": "", "restrict_to_domain": ("in", active_domains)},
 		order_by="name",
 	)

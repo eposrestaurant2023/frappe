@@ -1210,7 +1210,7 @@ def fmt_money(
 	amount = comma_str.join(parts) + ((precision and decimal_str) and (decimal_str + decimals) or "")
 	if amount != "0":
 		amount = minus + amount
-
+	 
 	if currency and frappe.defaults.get_global_default("hide_currency_symbol") != "Yes":
 		symbol = frappe.db.get_value("Currency", currency, "symbol", cache=True) or currency
 		symbol_on_right = frappe.db.get_value("Currency", currency, "symbol_on_right", cache=True)

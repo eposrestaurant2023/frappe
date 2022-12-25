@@ -154,7 +154,7 @@
    "fieldtype": "Link",
    "label": "Report Name",
    "mandatory_depends_on": "eval: doc.type == 'Report'",
-   "options": "Report"
+   "options": "Report Report"
   },
   {
    "depends_on": "eval: doc.type == 'Report'",
@@ -191,8 +191,8 @@
    "options": "Sum\nAverage\nMinimum\nMaximum"
   },
   {
-   "description": "The document type selected is a child table, so the parent document type is required.",
    "depends_on": "eval: doc.type === 'Document Type'",
+   "description": "The document type selected is a child table, so the parent document type is required.",
    "fieldname": "parent_document_type",
    "fieldtype": "Link",
    "label": "Parent Document Type",
@@ -200,7 +200,7 @@
   }
  ],
  "links": [],
- "modified": "2022-06-12 15:34:38.210910",
+ "modified": "2022-12-21 15:19:49.636558",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Number Card",

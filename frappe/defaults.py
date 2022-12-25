@@ -236,7 +236,7 @@ def get_defaults_for(parent="__default"):
 				defaults[d.defkey] = d.defvalue
 
 		frappe.cache().hset("defaults", parent, defaults)
-
+	
 	return defaults
 
 

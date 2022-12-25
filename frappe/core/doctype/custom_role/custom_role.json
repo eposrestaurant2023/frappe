@@ -25,7 +25,7 @@
    "fieldname": "report",
    "fieldtype": "Link",
    "label": "Report",
-   "options": "Report"
+   "options": "Report Report"
   },
   {
    "fieldname": "permission_rules",
@@ -50,7 +50,7 @@
   }
  ],
  "links": [],
- "modified": "2022-08-03 12:20:52.985554",
+ "modified": "2022-12-21 15:19:50.955904",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Custom Role",
