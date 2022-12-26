@@ -351,8 +351,6 @@ frappe.ui.form.on("User Email", {
 });
 
 function has_access_to_edit_user() {
-	 
-
 	return has_common(frappe.user_roles, get_roles_for_editing_user());
 }
 

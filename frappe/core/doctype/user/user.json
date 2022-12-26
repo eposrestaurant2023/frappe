@@ -14,6 +14,8 @@
   "first_name",
   "middle_name",
   "last_name",
+  "role_profile_name",
+  "module_profile",
   "column_break0",
   "full_name",
   "username",
@@ -25,11 +27,9 @@
   "user_image",
   "roles_permissions_tab",
   "sb1",
-  "role_profile_name",
   "roles_html",
   "roles",
   "sb_allow_modules",
-  "module_profile",
   "modules_html",
   "block_modules",
   "home_settings",
@@ -131,6 +131,7 @@
   {
    "fieldname": "middle_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Middle Name",
    "oldfieldname": "middle_name",
    "oldfieldtype": "Data"
@@ -139,6 +140,7 @@
    "bold": 1,
    "fieldname": "last_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Last Name",
    "oldfieldname": "last_name",
    "oldfieldtype": "Data"
@@ -152,11 +154,11 @@
    "read_only": 1
   },
   {
-   "bold": 1,
-   "default": "1",
+   "default": "0",
    "depends_on": "eval:doc.__islocal",
    "fieldname": "send_welcome_email",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Send Welcome Email"
   },
   {
@@ -214,8 +216,7 @@
    "fieldname": "role_profile_name",
    "fieldtype": "Link",
    "label": "Role Profile",
-   "options": "Role Profile",
-   "permlevel": 1
+   "options": "Role Profile"
   },
   {
    "fieldname": "roles_html",
@@ -757,7 +758,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-12-24 12:37:47.583225",
+ "modified": "2022-12-26 11:42:16.870549",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
