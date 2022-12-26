@@ -759,7 +759,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-12-26 11:48:26.290293",
+ "modified": "2022-12-26 12:34:32.873874",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
@@ -790,7 +790,6 @@
    "select": 1
   }
  ],
- "quick_entry": 1,
  "route": "user",
  "search_fields": "full_name",
  "show_name_in_global_search": 1,
