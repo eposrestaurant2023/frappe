@@ -65,11 +65,12 @@ class User(Document):
 		frappe.cache().delete_key("enabled_users")
 
 	def validate(self):
-		if not self.role_profile_name:
-			frappe.throw(_("Please select role profile"))
-   
-		if not self.module_profile:
-			frappe.throw(_("Please select module profile"))
+		if not self.name in ["Administrator","Admin", "admin@mail.com","admin"]:
+			if not self.role_profile_name:
+				frappe.throw(_("Please select role profile"))
+	
+			if not self.module_profile:
+				frappe.throw(_("Please select module profile"))
    
 		# clear new password
 		self.__new_password = self.new_password
