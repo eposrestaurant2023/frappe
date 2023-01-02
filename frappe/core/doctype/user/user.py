@@ -392,8 +392,8 @@ class User(Document):
 		if self.is_system_manager_disabled():
 			return
 
-		if not self.get_other_system_managers():
-			throw(_("There should remain at least one System Manager"))
+		# if not self.get_other_system_managers():
+		# 	throw(_("There should remain at least one System Manager"))
 
 	def on_trash(self):
 		frappe.clear_cache(user=self.name)
