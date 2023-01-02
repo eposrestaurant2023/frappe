@@ -14,8 +14,6 @@
   "first_name",
   "middle_name",
   "last_name",
-  "role_profile_name",
-  "module_profile",
   "column_break0",
   "full_name",
   "username",
@@ -27,9 +25,11 @@
   "user_image",
   "roles_permissions_tab",
   "sb1",
+  "role_profile_name",
   "roles_html",
   "roles",
   "sb_allow_modules",
+  "module_profile",
   "modules_html",
   "block_modules",
   "home_settings",
@@ -131,7 +131,6 @@
   {
    "fieldname": "middle_name",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Middle Name",
    "oldfieldname": "middle_name",
    "oldfieldtype": "Data"
@@ -140,7 +139,6 @@
    "bold": 1,
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Last Name",
    "oldfieldname": "last_name",
    "oldfieldtype": "Data"
@@ -154,11 +152,11 @@
    "read_only": 1
   },
   {
-   "default": "0",
+   "bold": 1,
+   "default": "1",
    "depends_on": "eval:doc.__islocal",
    "fieldname": "send_welcome_email",
    "fieldtype": "Check",
-   "hidden": 1,
    "label": "Send Welcome Email"
   },
   {
@@ -216,7 +214,8 @@
    "fieldname": "role_profile_name",
    "fieldtype": "Link",
    "label": "Role Profile",
-   "options": "Role Profile"
+   "options": "Role Profile",
+   "permlevel": 1
   },
   {
    "fieldname": "roles_html",
@@ -349,7 +348,6 @@
    "collapsible": 1,
    "fieldname": "document_follow_notifications_section",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Document Follow"
   },
   {
@@ -371,7 +369,6 @@
    "depends_on": "enabled",
    "fieldname": "email_settings",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Email"
   },
   {
@@ -556,7 +553,6 @@
    "depends_on": "enabled",
    "fieldname": "third_party_authentication",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Third Party Authentication",
    "permlevel": 1
   },
@@ -677,6 +673,7 @@
   {
    "fieldname": "roles_permissions_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Roles & Permissions"
   },
   {
@@ -694,7 +691,6 @@
    "collapsible": 1,
    "fieldname": "desk_settings_section",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Desk Settings"
   }
  ],
@@ -758,7 +754,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2023-01-02 12:31:13.026599",
+ "modified": "2023-01-02 15:13:42.751855",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
@@ -789,6 +785,7 @@
    "select": 1
   }
  ],
+ "quick_entry": 1,
  "route": "user",
  "search_fields": "full_name",
  "show_name_in_global_search": 1,

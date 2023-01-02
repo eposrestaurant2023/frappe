@@ -32,7 +32,7 @@ def get_modules_from_all_apps():
 
 def get_modules_from_app(app):
 	return frappe.get_all(
-		"Module Def", filters={"app_name": app,"is_hide":0}, fields=["module_name", "app_name as app"]
+		"Module Def", filters={"app_name": app}, fields=["module_name", "app_name as app"]
 	)
 
 
