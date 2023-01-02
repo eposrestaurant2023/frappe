@@ -183,15 +183,15 @@ class User(Document):
 		):
 			return
 
-		if (
-			self.name not in STANDARD_USERS
-			and self.user_type == "System User"
-			and not self.get_other_system_managers()
-			and cint(frappe.db.get_single_value("System Settings", "setup_complete"))
-		):
+		# if (
+		# 	self.name not in STANDARD_USERS
+		# 	and self.user_type == "System User"
+		# 	and not self.get_other_system_managers()
+		# 	and cint(frappe.db.get_single_value("System Settings", "setup_complete"))
+		# ):
 
-			msgprint(_("Adding System Manager to this User as there must be atleast one System Manager"))
-			self.append("roles", {"doctype": "Has Role", "role": "System Manager"})
+		# 	msgprint(_("Adding System Manager to this User as there must be atleast one System Manager"))
+		# 	self.append("roles", {"doctype": "Has Role", "role": "System Manager"})
 
 		if self.name == "Administrator":
 			# Administrator should always have System Manager Role
