@@ -50,6 +50,8 @@
   "banner_image",
   "change_password",
   "new_password",
+  "column_break_44",
+  "pos_pin_code",
   "logout_all_sessions",
   "reset_password_key",
   "last_reset_password_key_generated_on",
@@ -92,6 +94,8 @@
   "generate_keys",
   "column_break_65",
   "api_secret",
+  "pos_settings_section",
+  "allow_login_to_pos",
   "connections_tab"
  ],
  "fields": [
@@ -131,7 +135,6 @@
   {
    "fieldname": "middle_name",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Middle Name",
    "oldfieldname": "middle_name",
    "oldfieldtype": "Data"
@@ -140,7 +143,6 @@
    "bold": 1,
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Last Name",
    "oldfieldname": "last_name",
    "oldfieldtype": "Data"
@@ -154,11 +156,11 @@
    "read_only": 1
   },
   {
-   "default": "0",
+   "bold": 1,
+   "default": "1",
    "depends_on": "eval:doc.__islocal",
    "fieldname": "send_welcome_email",
    "fieldtype": "Check",
-   "hidden": 1,
    "label": "Send Welcome Email"
   },
   {
@@ -216,7 +218,8 @@
    "fieldname": "role_profile_name",
    "fieldtype": "Link",
    "label": "Role Profile",
-   "options": "Role Profile"
+   "options": "Role Profile",
+   "permlevel": 1
   },
   {
    "fieldname": "roles_html",
@@ -349,7 +352,6 @@
    "collapsible": 1,
    "fieldname": "document_follow_notifications_section",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Document Follow"
   },
   {
@@ -371,7 +373,6 @@
    "depends_on": "enabled",
    "fieldname": "email_settings",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Email"
   },
   {
@@ -556,7 +557,6 @@
    "depends_on": "enabled",
    "fieldname": "third_party_authentication",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Third Party Authentication",
    "permlevel": 1
   },
@@ -677,6 +677,7 @@
   {
    "fieldname": "roles_permissions_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Roles & Permissions"
   },
   {
@@ -694,8 +695,29 @@
    "collapsible": 1,
    "fieldname": "desk_settings_section",
    "fieldtype": "Section Break",
-   "hidden": 1,
    "label": "Desk Settings"
+  },
+  {
+   "fieldname": "column_break_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pos_pin_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "POS PIN Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "pos_settings_section",
+   "fieldtype": "Tab Break",
+   "label": "POS Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_login_to_pos",
+   "fieldtype": "Check",
+   "label": "Allow Login to POS"
   }
  ],
  "icon": "fa fa-user",
@@ -758,7 +780,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2023-01-02 16:29:05.769978",
+ "modified": "2023-01-09 19:01:01.476101",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
@@ -789,6 +811,7 @@
    "select": 1
   }
  ],
+ "quick_entry": 1,
  "route": "user",
  "search_fields": "full_name",
  "show_name_in_global_search": 1,

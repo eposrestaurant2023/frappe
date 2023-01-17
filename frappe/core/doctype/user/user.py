@@ -1,5 +1,6 @@
 # Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 # License: MIT. See LICENSE
+import base64
 from datetime import timedelta
 
 import frappe
@@ -104,6 +105,10 @@ class User(Document):
 			not self.get_social_login_userid("frappe")
 		):
 			self.set_social_login_userid("frappe", frappe.generate_hash(length=39))
+   
+		if self.__new_password:
+			self.pos_pin_code = (str( base64.b64encode(self.__new_password.encode("utf-8")).decode("utf-8")))
+		
 
 	def validate_roles(self):
 		if self.role_profile_name:
@@ -144,8 +149,8 @@ class User(Document):
 			frappe.cache().delete_key("enabled_users")
 		elif self.has_value_changed("allow_in_mentions") or self.has_value_changed("user_type"):
 			frappe.cache().delete_key("users_for_mentions")
-   
-		
+	 
+	
     
 		
 		 
@@ -209,7 +214,9 @@ class User(Document):
 	def email_new_password(self, new_password=None):
 		if new_password and not self.flags.in_insert:
 			_update_password(user=self.name, pwd=new_password, logout_all_sessions=self.logout_all_sessions)
+			
 
+  
 	def set_system_user(self):
 		"""For the standard users like admin and guest, the user type is fixed."""
 		user_type_mapper = {"Administrator": "System User", "Guest": "Website User"}
