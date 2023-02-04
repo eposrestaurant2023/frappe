@@ -251,11 +251,11 @@ def get_module_name(
 	return f"{app}.{module}.doctype.{doctype}.{prefix}{doctype}{suffix}"
 
 
-	def get_module_app(module: str) -> str:
-		app = frappe.local.module_app.get(scrub(module))
-		if app is None:
-			frappe.throw(_("Module {} not found").format(module), exc=frappe.DoesNotExistError)
-		return app
+def get_module_app(module: str) -> str:
+	app = frappe.local.module_app.get(scrub(module))
+	if app is None:
+		frappe.throw(_("Module {} not found").format(module), exc=frappe.DoesNotExistError)
+	return app
 
 
 def get_app_publisher(module: str) -> str:
