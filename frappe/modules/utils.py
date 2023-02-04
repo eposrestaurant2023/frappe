@@ -221,7 +221,7 @@ def get_doctype_module(doctype: str) -> str:
 
 
 def load_doctype_module(doctype, module=None, prefix="", suffix=""):
-    if doctype !="Report Report":
+	if doctype !="Report Report":
 		"""Returns the module object for given doctype.
 
 		Note: This will return the standard defined module object for the doctype irrespective
