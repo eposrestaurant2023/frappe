@@ -12,6 +12,7 @@
   "column_break_3",
   "standard",
   "custom_format",
+  "show_in_pos",
   "disabled",
   "section_break_6",
   "print_format_type",
@@ -38,7 +39,18 @@
   "print_format_help",
   "format_data",
   "print_format_builder",
-  "print_format_builder_beta"
+  "print_format_builder_beta",
+  "pos_receipt_setting_tab",
+  "pos_invoice_file_name",
+  "pos_receipt_file_name",
+  "receipt_height",
+  "receipt_width",
+  "receipt_margin_top",
+  "receipt_margin_bottom",
+  "receipt_margin_left",
+  "receipt_margin_right",
+  "print_invoice_copies",
+  "print_receipt_copies"
  ],
  "fields": [
   {
@@ -253,13 +265,82 @@
    "fieldtype": "Select",
    "label": "Page Number",
    "options": "Hide\nTop Left\nTop Center\nTop Right\nBottom Left\nBottom Center\nBottom Right"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_in_pos",
+   "fieldtype": "Check",
+   "label": "Show In POS"
+  },
+  {
+   "fieldname": "pos_receipt_setting_tab",
+   "fieldtype": "Tab Break",
+   "label": "POS Receipt Setting"
+  },
+  {
+   "fieldname": "pos_invoice_file_name",
+   "fieldtype": "Data",
+   "label": "POS Invoice File Name"
+  },
+  {
+   "fieldname": "pos_receipt_file_name",
+   "fieldtype": "Data",
+   "label": "POS Receipt File Name"
+  },
+  {
+   "default": "3.14",
+   "fieldname": "receipt_width",
+   "fieldtype": "Float",
+   "label": "Receipt Width"
+  },
+  {
+   "default": "0",
+   "fieldname": "receipt_margin_top",
+   "fieldtype": "Float",
+   "label": "Receipt Margin Top"
+  },
+  {
+   "default": "0",
+   "fieldname": "receipt_margin_bottom",
+   "fieldtype": "Float",
+   "label": "Receipt Margin Bottom"
+  },
+  {
+   "default": "0",
+   "fieldname": "receipt_margin_left",
+   "fieldtype": "Float",
+   "label": "Receipt Margin Left"
+  },
+  {
+   "default": "0",
+   "fieldname": "receipt_margin_right",
+   "fieldtype": "Float",
+   "label": "Receipt Margin Right"
+  },
+  {
+   "default": "11",
+   "fieldname": "receipt_height",
+   "fieldtype": "Float",
+   "label": "Receipt Height"
+  },
+  {
+   "default": "1",
+   "fieldname": "print_invoice_copies",
+   "fieldtype": "Int",
+   "label": "Print Invoice Copies"
+  },
+  {
+   "default": "1",
+   "fieldname": "print_receipt_copies",
+   "fieldtype": "Int",
+   "label": "Print Receipt Copies"
   }
  ],
  "icon": "fa fa-print",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-12 17:52:41.167107",
+ "modified": "2023-01-23 16:27:01.316632",
  "modified_by": "Administrator",
  "module": "Printing",
  "name": "Print Format",
@@ -280,5 +361,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

@@ -96,6 +96,8 @@
   "api_secret",
   "pos_settings_section",
   "allow_login_to_pos",
+  "column_break_90",
+  "pos_user_permission",
   "connections_tab"
  ],
  "fields": [
@@ -718,6 +720,16 @@
    "fieldname": "allow_login_to_pos",
    "fieldtype": "Check",
    "label": "Allow Login to POS"
+  },
+  {
+   "fieldname": "column_break_90",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pos_user_permission",
+   "fieldtype": "Link",
+   "label": "POS User Permission",
+   "options": "POS User Permission"
   }
  ],
  "icon": "fa fa-user",
@@ -780,7 +792,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2023-01-09 19:01:01.476101",
+ "modified": "2023-01-30 20:45:50.744169",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",

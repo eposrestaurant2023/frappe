@@ -20,6 +20,7 @@
   "column_break_7",
   "float_precision",
   "currency",
+  "second_currency",
   "currency_precision",
   "first_day_of_the_week",
   "sec_backup_limit",
@@ -519,12 +520,18 @@
    "fieldtype": "Link",
    "label": "Currency",
    "options": "Currency"
+  },
+  {
+   "fieldname": "second_currency",
+   "fieldtype": "Link",
+   "label": "Second Currency",
+   "options": "Currency"
   }
  ],
  "icon": "fa fa-cog",
  "issingle": 1,
  "links": [],
- "modified": "2022-12-21 17:17:16.680145",
+ "modified": "2023-01-23 17:25:08.748434",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "System Settings",
