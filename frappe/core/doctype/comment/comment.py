@@ -15,6 +15,9 @@ class Comment(Document):
 	def after_insert(self):
 		notify_mentions(self.reference_doctype, self.reference_name, self.content)
 		self.notify_change("add")
+		sql="update `tabComment` set owner=comment_by where name='{}'".format(self.name)
+		frappe.db.sql(sql)
+		
 
 	def validate(self):
 		if not self.comment_email:
