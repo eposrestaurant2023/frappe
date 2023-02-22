@@ -187,6 +187,9 @@ scheduler_events = {
 			"frappe.oauth.delete_oauth2_data",
 			"frappe.website.doctype.web_page.web_page.check_publish_status",
 			"frappe.twofactor.delete_all_barcodes_for_users",
+		],
+		"0 */12 * * *":[
+				"frappe.ftp_backup.execute_backup_command",
 		]
 	},
 	"all": [
