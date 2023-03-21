@@ -106,7 +106,7 @@
    "link_fieldname": "currency"
   }
  ],
- "modified": "2023-01-23 17:26:02.943046",
+ "modified": "2023-03-15 09:05:45.183709",
  "modified_by": "Administrator",
  "module": "Geo",
  "name": "Currency",
@@ -137,6 +137,15 @@
   {
    "read": 1,
    "role": "Purchase User"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
   }
  ],
  "sort_field": "modified",

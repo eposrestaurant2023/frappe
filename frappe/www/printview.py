@@ -69,6 +69,8 @@ def get_context(context):
 		"doctype": frappe.form_dict.doctype,
 		"name": frappe.form_dict.name,
 		"key": frappe.form_dict.get("key"),
+		"show_toolbar": frappe.form_dict.show_toolbar or 1,
+		"view": frappe.form_dict.view or 'print'
 	}
 
 

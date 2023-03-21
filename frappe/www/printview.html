@@ -4,6 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
+ 
+	{% if view=='ui' %}
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> 
+ {% endif %}
+	 
+	{% if view=='print' %}
 	<meta name="generator" content="frappe">
 	{{ include_style('print.bundle.css') }}
 	{% if print_style %}
@@ -11,23 +17,28 @@
 		{{ print_style }}
 		</style>
 	{% endif %}
+	{% endif %}
 </head>
 <body>
+	{% if show_toolbar==1 %}
 	<div class="action-banner print-hide">
 		<a class="p-2" onclick="window.print();">
-			{{ _("Print") }}
+			{{ _("Print") }} 
 		</a>
 		<a class="p-2"
 			href="/api/method/frappe.utils.print_format.download_pdf?doctype={{doctype}}&name={{name}}&key={{key}}">
 			{{ _('Get PDF') }}
 		</a>
 	</div>
+	{% endif %}
 	<div class="print-format-gutter">
 		<div class="print-format">
 			{{ body }}
 		</div>
 	</div>
+	{% if show_toolbar==1 %}
 	<script>
+		
 		document.addEventListener('DOMContentLoaded', () => {
 			const page_div = document.querySelector('.page-break');
 
@@ -35,14 +46,22 @@
 			page_div.style.flexDirection = 'column';
 
 			const footer_html = document.getElementById('footer-html');
+
+
 			footer_html.classList.add('hidden-pdf');
 			footer_html.classList.remove('visible-pdf');
 			footer_html.style.order = 1;
 			footer_html.style.marginTop = '20px';
 		});
 	</script>
+	{%endif%}
 </body>
 {%- if comment -%}
 <!-- {{ comment }} -->
 {%- endif -%}
+
+{% if view =='ui' %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+{% endif %}
+
 </html>
