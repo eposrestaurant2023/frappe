@@ -1135,6 +1135,14 @@ def parse_val(v):
 		v = int(v)
 	return v
 
+def fmt_base_currency(amount):
+	c = frappe.get_doc("Currency", frappe.db.get_default("currency"))
+	return "sdfdsfds"
+
+def fmt_second_currency(amount):
+	c = frappe.get_doc("Currency", frappe.db.get_default("currency"))
+	return "dfdfd"
+	
 
 def fmt_money(
 	amount: str | float | int | None,

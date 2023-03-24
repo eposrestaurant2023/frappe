@@ -15,6 +15,7 @@
   "custom_format",
   "show_in_pos",
   "show_in_pos_report",
+  "show_in_pos_closed_sale",
   "print_report_name",
   "sort_order",
   "disabled",
@@ -54,7 +55,9 @@
   "receipt_margin_left",
   "receipt_margin_right",
   "print_invoice_copies",
-  "print_receipt_copies"
+  "print_receipt_copies",
+  "other_tab",
+  "report_options"
  ],
  "fields": [
   {
@@ -363,13 +366,29 @@
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Sort Order"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_in_pos_closed_sale",
+   "fieldtype": "Check",
+   "label": "Show in POS Closed Sale "
+  },
+  {
+   "fieldname": "other_tab",
+   "fieldtype": "Tab Break",
+   "label": "Other"
+  },
+  {
+   "fieldname": "report_options",
+   "fieldtype": "JSON",
+   "label": "Report Options"
   }
  ],
  "icon": "fa fa-print",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-15 09:05:05.076650",
+ "modified": "2023-03-22 16:33:18.974143",
  "modified_by": "Administrator",
  "module": "Printing",
  "name": "Print Format",

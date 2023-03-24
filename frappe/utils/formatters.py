@@ -13,6 +13,7 @@ from frappe.utils import (
 	cstr,
 	flt,
 	fmt_money,
+	fmt_base_currency,
 	format_datetime,
 	format_duration,
 	format_time,

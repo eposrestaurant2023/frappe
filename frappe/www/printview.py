@@ -58,7 +58,10 @@ def get_context(context):
 		settings=settings,
 	)
 	print_style = get_print_style(frappe.form_dict.style, print_format)
-
+	
+	if (frappe.form_dict.view or 'print')=="ui":
+		print_style = print_format.css
+		
 	return {
 		"body": body,
 		"print_style": print_style,
