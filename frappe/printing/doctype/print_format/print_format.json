@@ -388,7 +388,7 @@
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-22 16:33:18.974143",
+ "modified": "2023-03-26 20:09:13.084302",
  "modified_by": "Administrator",
  "module": "Printing",
  "name": "Print Format",
@@ -427,6 +427,18 @@
    "report": 1,
    "role": "Guest",
    "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",

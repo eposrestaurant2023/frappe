@@ -113,7 +113,7 @@
   }
  ],
  "links": [],
- "modified": "2022-07-12 17:35:31.774137",
+ "modified": "2023-03-26 20:08:10.732374",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Comment",
@@ -140,6 +140,18 @@
    "read": 1,
    "report": 1,
    "role": "Website Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
    "share": 1,
    "write": 1
   }
