@@ -727,9 +727,8 @@
   },
   {
    "fieldname": "pos_user_permission",
-   "fieldtype": "Link",
-   "label": "POS User Permission",
-   "options": "POS User Permission"
+   "fieldtype": "Data",
+   "label": "POS User Permission"
   }
  ],
  "icon": "fa fa-user",
@@ -792,7 +791,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2023-01-30 20:45:50.744169",
+ "modified": "2023-03-26 20:00:37.079587",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
