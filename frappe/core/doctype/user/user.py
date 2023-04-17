@@ -36,6 +36,7 @@ from frappe.website.utils import is_signup_disabled
 STANDARD_USERS = frappe.STANDARD_USERS
 
 
+
 class User(Document):
 	__new_password = None
 

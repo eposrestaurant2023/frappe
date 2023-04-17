@@ -16,7 +16,6 @@ frappe.ui.form.on("User", {
 			update_tz_select();
 		}
 	},
-
 	time_zone: function (frm) {
 		if (frm.doc.time_zone && frm.doc.time_zone.startsWith("Etc")) {
 			frm.set_df_property(
