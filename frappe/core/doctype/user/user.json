@@ -811,7 +811,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2023-04-08 16:13:42.921675",
+ "modified": "2023-04-18 17:41:26.152918",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
@@ -839,6 +839,12 @@
   },
   {
    "role": "All",
+   "select": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
    "select": 1
   }
  ],
