@@ -75,7 +75,14 @@
   "max_auto_email_report_per_user",
   "system_updates_section",
   "disable_system_update_notification",
-  "disable_change_log_notification"
+  "disable_change_log_notification",
+  "ftp_setting_section",
+  "ftp_backup_path",
+  "ftp_user",
+  "delete_after",
+  "column_break_76",
+  "ftp_url",
+  "ftp_password"
  ],
  "fields": [
   {
@@ -526,12 +533,47 @@
    "fieldtype": "Link",
    "label": "Second Currency",
    "options": "Currency"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "ftp_setting_section",
+   "fieldtype": "Section Break",
+   "label": "FTP Setting"
+  },
+  {
+   "fieldname": "ftp_backup_path",
+   "fieldtype": "Data",
+   "label": "Backup Path"
+  },
+  {
+   "fieldname": "ftp_user",
+   "fieldtype": "Data",
+   "label": "User"
+  },
+  {
+   "fieldname": "delete_after",
+   "fieldtype": "Int",
+   "label": "Delete After"
+  },
+  {
+   "fieldname": "column_break_76",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ftp_url",
+   "fieldtype": "Data",
+   "label": "Url"
+  },
+  {
+   "fieldname": "ftp_password",
+   "fieldtype": "Data",
+   "label": "Password"
   }
  ],
  "icon": "fa fa-cog",
  "issingle": 1,
  "links": [],
- "modified": "2023-02-04 12:29:26.524849",
+ "modified": "2023-04-19 09:58:46.403514",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "System Settings",
