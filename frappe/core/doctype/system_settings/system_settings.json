@@ -21,6 +21,7 @@
   "float_precision",
   "currency",
   "second_currency",
+  "exchange_rate_main_currency",
   "currency_precision",
   "first_day_of_the_week",
   "sec_backup_limit",
@@ -568,12 +569,18 @@
    "fieldname": "ftp_password",
    "fieldtype": "Data",
    "label": "Password"
+  },
+  {
+   "fieldname": "exchange_rate_main_currency",
+   "fieldtype": "Link",
+   "label": "Exchange Rate Main Currency",
+   "options": "Currency"
   }
  ],
  "icon": "fa fa-cog",
  "issingle": 1,
  "links": [],
- "modified": "2023-04-19 09:58:46.403514",
+ "modified": "2023-05-03 09:28:08.998740",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "System Settings",
