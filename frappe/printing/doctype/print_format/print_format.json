@@ -16,6 +16,7 @@
   "show_in_pos",
   "show_in_pos_report",
   "show_in_pos_closed_sale",
+  "show_in_reservation_stay_detail",
   "print_report_name",
   "sort_order",
   "disabled",
@@ -382,13 +383,19 @@
    "fieldname": "report_options",
    "fieldtype": "JSON",
    "label": "Report Options"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_in_reservation_stay_detail",
+   "fieldtype": "Check",
+   "label": "Show In Reservation Stay Detail"
   }
  ],
  "icon": "fa fa-print",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-26 20:09:13.084302",
+ "modified": "2023-05-23 17:06:28.423774",
  "modified_by": "Administrator",
  "module": "Printing",
  "name": "Print Format",

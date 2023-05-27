@@ -7,6 +7,7 @@ frappe.ui.form.on("Workspace", {
 	},
 
 	refresh: function (frm) {
+		 
 		frm.enable_save();
 
 		let url = `/app/${

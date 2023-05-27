@@ -6,6 +6,7 @@
  "document_type": "Document",
  "engine": "InnoDB",
  "field_order": [
+  "customer",
   "title",
   "public",
   "notify_on_login",
@@ -77,12 +78,18 @@
    "fieldtype": "Table",
    "label": "Seen By Table",
    "options": "Note Seen By"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 1,
  "links": [],
- "modified": "2021-09-18 10:57:51.352643",
+ "modified": "2023-05-19 09:15:00.919351",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Note",
@@ -102,5 +109,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "ASC",
+ "states": [],
  "track_changes": 1
 }

@@ -61,7 +61,6 @@ def build_response(response_type=None):
 		"redirect": redirect,
 		"binary": as_binary,
 	}
-
 	return response_type_map[frappe.response.get("type") or response_type]()
 
 
