@@ -23,8 +23,10 @@
 		{% for include in include_css -%}
 		{{ include_style(include) }}
 		{%- endfor -%}
+	 
 	</head>
 	<body>
+
 		{% include "public/icons/timeless/icons.svg" %}
 		{% include "templates/includes/splash_screen.html" %}
 		<div class="main-section">
@@ -59,5 +61,30 @@
 			<source src="{{ sound.src }}"></source>
 		</audio>
 		{% endfor %}
+
+		<script>
+			$(document).ready(function(){
+				 
+				if (window.top !== window) {
+				 $("header").hide();
+			 
+				 $('.layout-side-section').css("display","none")
+				 
+				 
+				 setTimeout(function(){
+					 console.log(($(".content").find("div")[0]));
+					//  $('.page-head').removeClass('page-head') 
+					 
+ 
+ 
+				 },500)
+				 
+				}
+		 
+		  
+			 })
+		 
+		</script>
+
 	</body>
 </html>
