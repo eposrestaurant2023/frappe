@@ -698,7 +698,6 @@
   {
    "fieldname": "roles_permissions_tab",
    "fieldtype": "Tab Break",
-   "hidden": 1,
    "label": "Roles & Permissions"
   },
   {
@@ -811,7 +810,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2023-04-18 17:41:26.152918",
+ "modified": "2023-06-02 09:17:18.943174",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",

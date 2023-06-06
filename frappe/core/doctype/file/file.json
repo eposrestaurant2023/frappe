@@ -8,6 +8,8 @@
  "field_order": [
   "file_name",
   "is_private",
+  "title",
+  "description",
   "preview",
   "preview_html",
   "section_break_5",
@@ -168,13 +170,23 @@
    "fieldtype": "Check",
    "label": "Uploaded To Google Drive",
    "read_only": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
   }
  ],
  "force_re_route_to_default_view": 1,
  "icon": "fa fa-file",
  "idx": 1,
  "links": [],
- "modified": "2022-09-13 15:50:15.508251",
+ "modified": "2023-06-05 17:52:11.165536",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "File",

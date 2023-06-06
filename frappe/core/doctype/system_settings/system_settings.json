@@ -83,7 +83,8 @@
   "delete_after",
   "column_break_76",
   "ftp_url",
-  "ftp_password"
+  "ftp_password",
+  "ftp_folder_name"
  ],
  "fields": [
   {
@@ -575,12 +576,17 @@
    "fieldtype": "Link",
    "label": "Exchange Rate Main Currency",
    "options": "Currency"
+  },
+  {
+   "fieldname": "ftp_folder_name",
+   "fieldtype": "Data",
+   "label": "FTP Folder Name"
   }
  ],
  "icon": "fa fa-cog",
  "issingle": 1,
  "links": [],
- "modified": "2023-05-03 09:28:08.998740",
+ "modified": "2023-06-06 10:55:07.272939",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "System Settings",
