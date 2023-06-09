@@ -698,6 +698,7 @@
   {
    "fieldname": "roles_permissions_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Roles & Permissions"
   },
   {
@@ -810,7 +811,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2023-06-02 09:17:18.943174",
+ "modified": "2023-06-09 09:45:26.813913",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
@@ -834,6 +835,7 @@
    "permlevel": 1,
    "read": 1,
    "role": "System Manager",
+   "select": 1,
    "write": 1
   },
   {
@@ -845,6 +847,21 @@
    "report": 1,
    "role": "Guest",
    "select": 1
+  },
+  {
+   "role": "Admin",
+   "select": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "select": 1,
+   "share": 1
   }
  ],
  "quick_entry": 1,

@@ -79,6 +79,8 @@ class File(Document):
 		self.validate_duplicate_entry()
 
 	def validate(self):
+		if not self.title:
+			self.title = self.file_name
 		if self.is_folder:
 			return
 

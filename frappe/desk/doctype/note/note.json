@@ -11,6 +11,9 @@
   "public",
   "notify_on_login",
   "notify_on_every_login",
+  "frontdesk",
+  "reference_document_type",
+  "reference_name",
   "expire_notification_on",
   "content",
   "seen_by_section",
@@ -84,12 +87,28 @@
    "fieldtype": "Link",
    "label": "Customer",
    "options": "Customer"
+  },
+  {
+   "default": "0",
+   "fieldname": "frontdesk",
+   "fieldtype": "Check",
+   "label": "Frontdesk"
+  },
+  {
+   "fieldname": "reference_document_type",
+   "fieldtype": "Data",
+   "label": "Reference Document Type"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Data",
+   "label": "Reference Name"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 1,
  "links": [],
- "modified": "2023-05-19 09:15:00.919351",
+ "modified": "2023-06-08 14:57:52.455653",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Note",

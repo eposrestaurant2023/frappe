@@ -33,6 +33,7 @@ body {
     overflow-x: hidden;
     color: var(--text-color);
     font-weight: var(--primary-font-weight);
+    font-family: var(--font-family);
 }
 
 .report-list tbody tr:first-child {
