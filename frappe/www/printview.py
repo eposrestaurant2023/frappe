@@ -73,7 +73,9 @@ def get_context(context):
 		"name": frappe.form_dict.name,
 		"key": frappe.form_dict.get("key"),
 		"show_toolbar": frappe.form_dict.show_toolbar or 1,
-		"view": frappe.form_dict.view or 'print'
+		"view": frappe.form_dict.view or 'print',
+		"format":print_format.name,
+		"folio":frappe.form_dict.folio
 	}
 
 

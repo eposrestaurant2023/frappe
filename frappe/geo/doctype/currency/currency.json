@@ -18,7 +18,8 @@
   "symbol_on_right",
   "number_format",
   "currency_precision",
-  "pos_currency_format"
+  "pos_currency_format",
+  "locale"
  ],
  "fields": [
   {
@@ -89,6 +90,11 @@
    "fieldname": "pos_currency_format",
    "fieldtype": "Data",
    "label": "POS Currency Format"
+  },
+  {
+   "fieldname": "locale",
+   "fieldtype": "Data",
+   "label": "Locale"
   }
  ],
  "icon": "fa fa-bitcoin",
@@ -106,7 +112,7 @@
    "link_fieldname": "currency"
   }
  ],
- "modified": "2023-03-15 09:05:45.183709",
+ "modified": "2023-06-22 16:15:18.883523",
  "modified_by": "Administrator",
  "module": "Geo",
  "name": "Currency",

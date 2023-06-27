@@ -17,6 +17,12 @@
   "link_doctype",
   "link_name",
   "reference_owner",
+  "reservation",
+  "reservation_stay",
+  "reservation_folio",
+  "folio_number",
+  "deleted_document",
+  "reason",
   "section_break_10",
   "content",
   "ip_address"
@@ -110,10 +116,40 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "IP Address"
+  },
+  {
+   "fieldname": "reservation",
+   "fieldtype": "Data",
+   "label": "Reservation"
+  },
+  {
+   "fieldname": "reservation_stay",
+   "fieldtype": "Data",
+   "label": "Reservation Stay"
+  },
+  {
+   "fieldname": "folio_number",
+   "fieldtype": "Data",
+   "label": "Folio Number"
+  },
+  {
+   "fieldname": "reservation_folio",
+   "fieldtype": "Data",
+   "label": "Reservation Folio"
+  },
+  {
+   "fieldname": "deleted_document",
+   "fieldtype": "Data",
+   "label": "Deleted Document"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
   }
  ],
  "links": [],
- "modified": "2023-03-26 20:08:10.732374",
+ "modified": "2023-06-23 14:21:09.150660",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Comment",
