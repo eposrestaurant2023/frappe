@@ -23,13 +23,14 @@
 
 </head>
 <body>
-	{% if show_toolbar==1 %}
+
+	{% if show_toolbar=="1" %}
 	<div class="action-banner print-hide">
 		<a class="p-2" onclick="window.print();">
 			{{ _("Print") }} 
 		</a>
 		<a class="p-2"
-			href="/api/method/frappe.utils.print_format.download_pdf?doctype={{doctype}}&name={{name}}&key={{key}}&format={{format}}&folio={{folio}}">
+			href="/api/method/frappe.utils.print_format.download_pdf?doctype={{doctype}}&name={{name}}&key={{key}}&format={{format}}&folio={{folio}}&reservation={{reservation}}&reservation_stay={{frappe.form_dict.get('reservation_stay')}}">
 			{{ _('Get PDF') }}
 		</a>
 	</div>

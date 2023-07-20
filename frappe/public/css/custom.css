@@ -21,7 +21,7 @@
     --text-color-btn: #000;
     --font-size: 13px;
     --bg-tb-color: #eaf0f5;
-    --bg-tb-sec-color: #f2f2f2;
+    --bg-tb-sec-color: #eff2f7;
     --tb-header-border: #eff3f8;
     --bg-purple-cs: #4338ca;
 }
@@ -73,4 +73,86 @@ body {
     cursor: pointer !important;
     display: inline-block !important;
 }
+.text-center.small.page-number.visible-pdf , div#footer-html {
+    visibility: hidden;
+    display: none;
+}
+#footer-html{
+    display: none;
+}
+.report-list tbody tr:first-child{
+    text-align: left;
+    border: 1px solid #dee2e6;
+    border-width: 0 0 1px 0;
+    color: #343a40;
+    background: #f8f9fa;
+    transition: box-shadow 0.2s;
+}
+.report-list tbody tr:first-child th{
+    padding: .5rem .5rem;
+    font-weight: 600;
+}
+.table-print-format tr td{
+    border:1px solid #dee2e6;
+    padding:0.5rem;
+    white-space: nowrap;
+}
+.table-print-format tr td:first-child{
+    background: rgb(243, 243, 243);
 
+}
+.table-print-format tr td:nth-child(2){
+    font-weight: 600 !important;
+    width: 100%;
+}
+.bg-header-table{
+    background-color: rgb(226 232 240) !important;
+    font-weight: 500;
+    color: #364963 !important;
+}
+.report-list tr:not(:first-child):hover{
+background-color: #e3efff !important;
+cursor: pointer;
+}
+.report-list tr{
+    white-space: nowrap !important;
+}
+/* .report-list.occupied-001 tbody tr td:first-child,
+.report-list.occupied-001 tbody tr td:nth-child(2),
+.report-list.occupied-001 tbody tr td:nth-child(3){
+    text-align: center !important;
+}
+.report-list.occupied-001 tbody tr td:nth-child(10),
+.report-list.occupied-001 tbody tr td:nth-child(11){
+    text-align: right !important;
+}
+.report-list.occupied-001 tbody tr th:nth-child(10),
+.report-list.occupied-001 tbody tr th:nth-child(11){
+    text-align: right !important;
+} */
+.link_line_action1 {
+    border: 1px dashed var(--bg-purple-cs) !important;
+    border-radius: 10px !important;
+    padding: 0 5px !important;
+    color: var(--bg-purple-cs) !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+}
+/* .print-format-gutter{
+    margin-right: 1rem;
+} */
+.isemtyIcon{
+        background-image: url("icons/icon-no-notic-r-comment.svg");   
+        height: 55px;
+        background-repeat: no-repeat;
+        background-position: center; 
+  }
+.text-emty{
+    font-size: 0.875rem !important;
+    font-style: italic !important;
+    color: #BDBDBD;
+}
+#header-html{
+    display: none;
+}

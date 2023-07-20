@@ -74,9 +74,12 @@ def get_context(context):
 		"key": frappe.form_dict.get("key"),
 		"show_toolbar": frappe.form_dict.show_toolbar or 1,
 		"view": frappe.form_dict.view or 'print',
-		"format":print_format.name,
-		"folio":frappe.form_dict.folio
+		"format": "" if  not print_format  else  print_format.name,
+		"folio":frappe.form_dict.folio,
+		"reservation":frappe.form_dict.reservation,
+		"reservation_stay":frappe.form_dict.reservation_stay,
 	}
+
 
 
 def get_print_format_doc(print_format_name, meta):
