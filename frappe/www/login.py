@@ -32,6 +32,7 @@ def get_context(context):
 				redirect_to = get_home_page()
 			else:
 				redirect_to = "/app"
+				
 
 		if redirect_to != "login":
 			frappe.local.flags.redirect_location = redirect_to

@@ -1,4 +1,5 @@
 from . import __version__ as app_version
+import frappe
 
 app_name = "frappe"
 app_title = "Frappe Framework"
@@ -78,6 +79,9 @@ on_session_creation = [
 	"frappe.core.doctype.activity_log.feed.login_feed",
 	"frappe.core.doctype.user.user.notify_admin_access_to_system_manager",
 ]
+
+def after_login(login_manager):
+    frappe.msgprint("Login successful!")
 
 on_logout = (
 	"frappe.core.doctype.session_default_settings.session_default_settings.clear_session_defaults"

@@ -156,3 +156,15 @@ cursor: pointer;
 #header-html{
     display: none;
 }
+
+.primary_message{
+    background-color:#e9e9ff;
+    color: #696cff;
+    border-left: 4px solid #696cff;
+    padding: 15px 15px;
+}
+.font-widht-tr-header{
+    background-color: rgb(243, 243, 243) !important;
+    font-weight: 500;
+    color: #364963 !important;
+}
