@@ -171,7 +171,7 @@ class DocumentNamingSettings(Document):
 
 	@frappe.whitelist()
 	def update_series_start(self):
-		frappe.only_for("System Manager")
+		# frappe.only_for("System Manager")
 
 		if not self.prefix:
 			frappe.throw(_("Please select prefix first"))
