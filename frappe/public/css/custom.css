@@ -168,3 +168,10 @@ cursor: pointer;
     font-weight: 500;
     color: #364963 !important;
 }
+.ms-info{
+    background-color: #dadafc;
+    padding: 1.25rem 1.75rem;
+    border-left: 4px solid #6366f1;
+    width: 100%;
+    margin-bottom: 10px;
+}
