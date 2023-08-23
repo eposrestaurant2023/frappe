@@ -182,6 +182,7 @@ frappe.PermissionEngine = class PermissionEngine {
 				args: { doctype, role },
 			})
 			.then((r) => {
+				console.log(r.message)
 				this.render(r.message);
 			});
 	}

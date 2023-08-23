@@ -153,7 +153,7 @@ class Workspace:
 			return True
 		if item_type == "dashboard":
 			return True
-		if item_type == "url":
+		if item_type == "url" or item_type == "URL":
 			return True
 
 		return False
