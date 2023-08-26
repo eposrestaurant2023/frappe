@@ -45,13 +45,12 @@ export default class ShortcutWidget extends Widget {
 			if (e.ctrlKey || e.metaKey) {
 				frappe.open_in_new_tab = true;
 			}
-
 			if (this.type == "URL") {
 				if (frappe.open_in_new_tab) {
 					window.open(this.url, "_blank");
 					frappe.open_in_new_tab = false;
 				} else {
-					window.location.href = this.url;
+					window.open(this.url, "_blank");
 				}
 				return;
 			}
