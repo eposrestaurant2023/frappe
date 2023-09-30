@@ -1,0 +1,14 @@
+{
+ "creation": "2023-09-30 09:46:56.398618",
+ "css": "\n\n.print-format {\n    font-size: 10px;\n    background: white;\n    pading:0.33in!important;\n   \n}\n\n.print-heading {\n    border-bottom: 1px solid #f4f5f6;\n    padding-bottom: 5px;\n    margin-bottom: 10px;\n}\n\n\nh2 {\n    font-size: 16px;\n    text-align:center!important;\n    margin:0px!important;\n    padding:0px!important;\n    text-transform: uppercase!important;\n}\n\nhr{\n    margin-top: 5px;\n    margin-bottom: 5px;\n    border: 0;\n    border-top: 1px solid #000000;\n}\n\n.print-heading h2 {\n    font-size: 18px;\n    text-align:center\n}\n\n.print-heading h2 div {\n    font-weight: 600;\n}\n\n.print-heading small {\n    font-size: 13px !important;\n    font-weight: normal;\n    line-height: 2.5;\n    color: #4c5a67;\n}\n\n.print-format .letter-head {\n    margin-bottom: 5px;\n}\n\n.print-format .letter-head h1 {\n    margin: 0px!important;\n}\n\n.print-format label {\n    font-weight: normal;\n    font-size: 13px;\n    color: #4C5A67;\n    margin-bottom: 0;\n}\n\n.print-format .data-field {\n    margin-top: 0;\n    margin-bottom: 0;\n}\n\n.print-format .value {\n    color: #192734;\n    line-height: 1.8;\n}\n\n.print-format .section-break:not(:last-child) {\n    margin-bottom: 0;\n}\n\n.print-format .row:not(.section-break) {\n    line-height: 1.6;\n    margin-top: 15px !important;\n}\n\n.print-format .important .value {\n    font-size: 13px;\n    font-weight: 600;\n}\n.print-format thead {\n    border-bottom:solid 1px #000!important;\n}\n.print-format th {\n    color: #000!important;\n    font-weight: normal;\n    border:0px  !important;\n    background:#a2a2a2!important;\n    \n}\n\n.print-format .table-bordered td {\n    border: 0px!important;\n    border-bottom: solid 1px #efefef!important\n    \n}\n\n.print-format .table-bordered {\n    border: 0!important;\n    margin-top:-5px!important;\n}\n\n.print-format td, .print-format th {\n    padding:5px 5px !important;\n    vertical-align:middle!important;\n}\n\n.print-format .primary.compact-item {\n    font-weight: normal;\n}\n\n.print-format table td .value {\n    font-size: 12px;\n    line-height: 1.8;\n}\n",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Print Style",
+ "idx": 0,
+ "modified": "2023-09-30 09:46:56.398618",
+ "modified_by": "Administrator",
+ "name": "Default Style",
+ "owner": "Administrator",
+ "print_style_name": "Default Style",
+ "standard": 1
+}
